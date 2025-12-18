@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traplay — Beranda</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color:#111 }
+    .nav { background:#2b7a78; color:#fff; padding:12px 20px }
+    .nav a { color:white; text-decoration:none; margin-right:14px; font-weight:600 }
+    .container { max-width:900px; margin:28px auto; padding:18px; background:#fff; border-radius:10px }
+    h1 { margin-top:0 }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:14px }
+    .card { padding:12px; border-radius:8px; background:#fcfcfc; box-shadow:0 4px 10px rgba(0,0,0,0.04) }
+    .card h3 { margin:6px 0 }
+    .btn { display:inline-block; padding:8px 12px; background:#2b7a78; color:white; border-radius:8px; text-decoration:none }
+    footer { text-align:center; color:#666; margin-top:20px; font-size:14px }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="#">Beranda</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <main class="container">
+    <h1>Selamat datang di Traplay</h1>
+    <p>Ringkasan permainan tradisional anak-anak Indonesia. Klik <a href="about.html">About</a> untuk penjelasan singkat tentang Traplay dan contoh permainannya.</p>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Egrang</h3>
+        <p>Permainan berjalan menggunakan bambu, melatih keseimbangan dan fokus.</p>
+      </div>
+
+      <div class="card">
+        <h3>Congklak</h3>
+        <p>Papan permainan biji yang melatih strategi dan berhitung cepat.</p>
+      </div>
+
+      <div class="card">
+        <h3>Lompat Tali</h3>
+        <p>Permainan ritme dan stamina, bisa dimainkan sendiri atau berkelompok.</p>
+      </div>
+
+      <div class="card">
+        <h3>Gobak Sodor</h3>
+        <p>Permainan tim berbasis strategi dan kecepatan.</p>
+      </div>
+    </section>
+
+
+      <section class="container" style="margin-top:20px; background:#fff; padding:18px; border-radius:10px">
+      <h2>Tujuan Traplay</h2>
+      <ul>
+        <li>Melestarikan permainan tradisional Indonesia.</li>
+        <li>Memberikan alternatif permainan yang mendidik untuk anak-anak.</li>
+        <li>Mengembangkan kreativitas, ketangkasan, dan kerja sama.</li>
+        <li>Mendorong anak-anak aktif bergerak di luar ruangan.</li>
+        <li>Mengenalkan nilai budaya dan kebersamaan sejak dini.</li>
+      </ul>
+    </section>
+
+  </main>
+   <footer>
+      <p>&copy; 2025 — Traplay</p>
+    </footer>
+
+  <script>
+    function downloadIndex(){
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'index.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
